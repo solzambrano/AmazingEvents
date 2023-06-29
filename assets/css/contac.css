@@ -1,0 +1,11 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+#formulario{
+    display: flex;
+    justify-content: center;
+}
+label{
+    padding: 10px;
+}

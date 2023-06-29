@@ -1,0 +1,13 @@
+.picture-category{
+    height: 100px;
+}
+#categorys{
+    display: flex;
+    justify-content: space-between;
+}
+.category{
+    margin-right: 2px;
+}
+label{
+    margin-right: 10px;
+}

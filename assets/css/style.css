@@ -1,0 +1,29 @@
+/*seccion header */
+header,#cintillo{
+    border-bottom: black solid 2px;
+    }
+img{
+    height: 26px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+div{
+    padding: 15px 8px;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+li{
+    padding: 0px 5px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+}
+/*seccion de home*/
