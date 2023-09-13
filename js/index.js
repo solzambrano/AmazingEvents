@@ -33,16 +33,22 @@ getData()
 let input=document.getElementById('input');
 let inputSearch;
 let glass=document.getElementById('glass')
+
 input.addEventListener('input',(e)=>{
     inputSearch=e.target.value;
-    console.log(inputSearch);
+    let dataFilter= data.filter(element=> {
+       return element.name.toLowerCase().includes(inputSearch.toLowerCase())
+        })
+        console.log(dataFilter)
+   loadInformation(dataFilter)
     if(inputSearch=="")loadInformation(data)
 })
-glass.addEventListener('click',()=>{
-    // let dataFilter=lowerArray()
-    let dataFilter= data.filter(element=> element.name.toLowerCase()==inputSearch.toLowerCase())
-    loadInformation(dataFilter)
-})
+/* al agregar includes() en la funcion input, ya no es necesario hacer el click pero queda comentado, por si
+se agregan mas objetos*/
+// glass.addEventListener('click',()=>{
+//     let dataFilter= data.include(element=> element.name.toLowerCase()==inputSearch.toLowerCase())
+//     loadInformation(dataFilter)
+// })
 
 //carga de la pagina
 document.addEventListener("DOMContentLoaded", function() {
