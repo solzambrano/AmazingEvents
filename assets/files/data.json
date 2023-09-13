@@ -1,0 +1,162 @@
+{
+  "currentDate": "2022-01-01",
+  "events": [
+    {
+      "id": 1,
+      "image":"https://img.freepik.com/fotos-premium/composicion-elegante-mascaras-carnaval-venecia_23-2147852470.jpg?size=626&ext=jpg&ga=GA1.1.256767329.1689790715&semt=sph",
+      "idImage":"as7.jpg",
+      "name":"Collectivities Party",
+      "date":"2021-12-12",
+      "description":"Enjoy your favourite dishes, from different countries, in a unique event for the family.",
+      "category":"Food Fair",
+      "place":"Room A",
+      "capacity":45000,
+      "assistance":42756,
+      "price":5
+    },
+    {
+      "id": 2,
+      "image":"https://img.freepik.com/foto-gratis/celebra-fiesta-ano-nuevo_329181-5651.jpg?size=626&ext=jpg&ga=GA1.1.256767329.1689790715&semt=sph",
+      "idImage":"as2.jpg",
+      "name":"Korean style",
+      "date":"2022-08-12",
+      "description":"Enjoy the best Korean dishes, with international chefs and awesome events.",
+      "category":"Food Fair",
+      "place":"Room A",
+      "capacity":45000,
+      "assistance":42756,
+      "price":10
+    },
+    {
+      "id": 4,
+      "image":"https://t3.ftcdn.net/jpg/06/09/86/04/240_F_609860419_unqNAVx3CMzIclZSG3HCYitkyc0Svsj6.jpg",
+      "idImage":"aalmuseo1.jpg",
+      "name":"Parisian Museum",
+      "date":"2022-11-02",
+      "description":"A unique tour in the city of lights, get to know one of the most iconic places.",
+      "category":"Museum",
+      "place":"Paris",
+      "capacity":8200,
+      "estimate":8200,
+      "price":3500
+    },
+    {
+      "id": 5,
+      "image":"https://t3.ftcdn.net/jpg/06/09/86/04/240_F_609860419_unqNAVx3CMzIclZSG3HCYitkyc0Svsj6.jpg",
+      "idImage":"disfraz2.jpg",
+      "name":"Comicon",
+      "date":"2021-02-12",
+      "description":"For comic lovers, all your favourite characters gathered in one place.",
+      "category":"Costume Party",
+      "place":"Room C",
+      "capacity":120000,
+      "assistance":110000,
+      "price":54
+    },
+    {
+      "id": 6,
+      "image":"https://t3.ftcdn.net/jpg/06/09/86/04/240_F_609860419_unqNAVx3CMzIclZSG3HCYitkyc0Svsj6.jpg",
+      "idImage":"disfraz3.jpg",
+      "name":"Halloween Night",
+      "date":"2022-02-12",
+      "description":"Come with your scariest costume and win incredible prizes.",
+      "category":"Costume Party",
+      "place":"Room C",
+      "capacity":12000,
+      "estimate":9000,
+      "price":12
+    },
+    {
+      "id": 7,
+      "image":"https://t3.ftcdn.net/jpg/06/09/86/04/240_F_609860419_unqNAVx3CMzIclZSG3HCYitkyc0Svsj6.jpg",
+      "idImage":"musica1.jpg",
+      "name":"Metallica in concert",
+      "date":"2022-01-22",
+      "description":"The only concert of the most emblematic band in the world.",
+      "category":"Music Concert",
+      "place":"Room A"
+      ,"capacity":138000,
+      "estimate":138000,
+      "price":150
+    },
+    {
+      "id": 8,
+      "image":"https://t3.ftcdn.net/jpg/06/09/86/04/240_F_609860419_unqNAVx3CMzIclZSG3HCYitkyc0Svsj6.jpg",
+      "idImage":"musica2.jpg",
+      "name":"Electronic Fest",
+      "date":"2021-01-22",
+      "description":"The best national and international DJs gathered in one place.",
+      "category":"Music Concert",
+      "place":"Room A",
+      "capacity":138000,
+      "assistance":110300,
+      "price":250
+      },
+    {
+      "id": 10,
+      "image":"https://t3.ftcdn.net/jpg/06/09/86/04/240_F_609860419_unqNAVx3CMzIclZSG3HCYitkyc0Svsj6.jpg",
+      "idImage":"maraton1.jpg",
+      "name":"15K NY",
+      "date":"2022-03-01",
+      "description":"We'll be raising funds for hospitals and medical care in this unique event held .",
+      "category":"Race",
+      "place":"New York",
+      "capacity":3000000,
+      "assistance":2569800,
+      "price":3
+      },
+    {
+      "id": 11,
+      "image":"https://img.freepik.com/foto-gratis/programacion-agenda_53876-88433.jpg?size=626&ext=jpg&ga=GA1.1.256767329.1689790715&semt=sph",
+      "idImage":"libros7.jpg",
+      "name":"School's book fair",
+      "date":"2022-10-15",
+      "description":"Bring your unused school book and take the one you need.",
+      "category":"Book Exchange",
+      "place":"Room D1",
+      "capacity":150000,
+      "estimate":123286,
+      "price":1
+    },
+    {
+      "id": 12,
+      "image":"https://img.freepik.com/foto-gratis/programacion-agenda_53876-88433.jpg?size=626&ext=jpg&ga=GA1.1.256767329.1689790715&semt=sph",
+      "idImage":"libros3.jpg",
+      "name":"Just for your kitchen",
+      "date":"2021-11-09",
+      "description":"If you're a gastronomy lover come get the cookbook that best suits for your family's.",
+      "category":"Book Exchange",
+      "place":"Room D6",
+      "capacity":130000,
+      "assistance":90000,
+      "price":100
+    },
+    {
+      "id": 13,
+      "image":"https://t3.ftcdn.net/jpg/06/00/07/84/240_F_600078400_He91Epe1YjGKKxvr3KuPSNZXsBTvJrSu.jpg",
+      "idImage":"cine3.jpg",
+      "name":"Batman",
+      "date":"2021-3-11",
+      "description":"Come see Batman fight crime in Gotham City.",
+      "category":"Cinema",
+      "place":"Room D1",
+      "capacity":11000,
+      "assistance":9300,
+      "price":225
+    },
+    {
+      "id": 14,
+      "image":"https://t3.ftcdn.net/jpg/06/00/07/84/240_F_600078400_He91Epe1YjGKKxvr3KuPSNZXsBTvJrSu.jpg",
+      "idImage":"cine7.jpg",
+      "name":"Avengers",
+      "date":"2022-10-15",
+      "description":"Marvel's Avengers Premier, the start of an epic saga with your favourite superheroes.",
+      "category":"Cinema",
+      "place":"Room D1",
+      "capacity":9000,
+      "estimate":9000,
+      "price":250
+    }
+  ]
+}
+  

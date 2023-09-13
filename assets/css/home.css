@@ -1,5 +1,11 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 .picture-category{
     height: 100px;
+    width: 50%;
 }
 #categorys{
     display: flex;
@@ -11,3 +17,8 @@
 label{
     margin-right: 10px;
 }
+#contenido{
+    background-color: rgb(243, 166, 166);
+}
+
+/* #mediaquery para menor a 720 */
