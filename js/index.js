@@ -3,9 +3,10 @@
 let data=[]
 /**variables del buscador */
 let input=document.getElementById('input');
-let inputSearch;
 let glass=document.getElementById('glass')
-
+/**variables de categoria */
+let category=document.getElementsByClassName('category')
+let categorySelected;
 /*declaracion de funciones*/
 const getData= async ()=>{
     await fetch('/assets/files/data.json')
@@ -37,19 +38,33 @@ getData()
 
 
 /**buscador */
-
-input.addEventListener('input',(e)=>{
-    inputSearch=e.target.value;
-    let dataFilter= data.filter(element=> {
-       return element.name.toLowerCase().includes(inputSearch.toLowerCase())
+const jsonFilter=(inputSearch,field)=>{
+      return dataFilter= data.filter(element=> {
+      return element[field].toLowerCase().includes(inputSearch.toLowerCase())   
         })
-   loadInformation(dataFilter)
+}
+input.addEventListener('input',(e)=>{
+    let inputSearch=e.target.value;
+   loadInformation(jsonFilter(inputSearch,'name'))
     if(inputSearch=="")loadInformation(data)
 })
+
+/***categorias */
+console.log(category);
+for(element of category){
+    element.addEventListener('click',(event)=>{
+        categorySelected=event.currentTarget.name
+         loadInformation(jsonFilter(categorySelected,'category'))
+         if(event.currentTarget.checked==false) loadInformation(data)
+        })
+}
 
 //carga de la pagina
 document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("input").value=''
+      for(element of category){
+        element.checked=false
+}
 })
 /* al agregar includes() en la funcion input, ya no es necesario hacer el click pero queda comentado, por si
 se agregan mas objetos*/
