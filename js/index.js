@@ -7,20 +7,44 @@ let glass=document.getElementById('glass')
 /**variables de categoria */
 let category=document.getElementsByClassName('category')
 let categorySelected;
+let page=window.location.pathname.split('/')
+let actualPage=page[page.length-1]
+let date=''
+
 /*declaracion de funciones*/
+/**funcion que carga la informacion del json */
 const getData= async ()=>{
     await fetch('/assets/files/data.json')
     .then(res=> res.json())
     .then(res=> {
         data=res.events
      });
-    loadInformation(data)
+     console.log(actualPage);
+      date=switchDate()
+      loadInformation(data,date)
 }
+/**verifica la fecha para mostrar distintas paginas, home muestra todas las card */
+const loadInformation=(data,date)=>{
+    let filteredData;
+    if(date!==''){
+       filteredData=data.filter(element => { 
+         return element.date.split("-")[0] == date
+         })
+         loadCard(filteredData)
+    }else loadCard(data)
 
-const loadInformation=(data)=>{
+    }
+/**funcion que toma la ultima parte de la url para poder saber el año y mostrar las distintas card en las paginas */
+const switchDate=()=>{
+  if (actualPage =='UpcomingEvents.html')return'2022'
+    else if (actualPage == 'PastEvents.html') return'2021'
+    else return''
+}
+/**aqui se carga la informacion de las card, si esta filtrada con fechas o va a home sin filtro */
+const loadCard=(informationData)=>{
     let inner=''
-    data.forEach(element => {    
-    inner+= ` 
+    informationData.forEach(element=>{
+        inner+= ` 
             <div class="col-sm-3">
                 <div class="card d-flex flex-column align-items-center flex-wrap">
                     <img src="${element.image}" class=" picture-category " alt="...">
@@ -33,29 +57,35 @@ const loadInformation=(data)=>{
     document.getElementById('cards').innerHTML=inner
     });
 }
+
 /**llamada de la funcion */
 getData()
 
 
+
 /**buscador */
+/**realiza el filtrado para la barra de busqueda */
 const jsonFilter=(inputSearch,field)=>{
       return dataFilter= data.filter(element=> {
       return element[field].toLowerCase().includes(inputSearch.toLowerCase())   
         })
 }
+/**listener que corresponde al input que ingresa el usuario */
 input.addEventListener('input',(e)=>{
     let inputSearch=e.target.value;
-   loadInformation(jsonFilter(inputSearch,'name'))
-    if(inputSearch=="")loadInformation(data)
+    date=switchDate()
+   loadInformation(jsonFilter(inputSearch,'name'),date)
+    if(inputSearch=="")loadInformation(data,date)
 })
 
 /***categorias */
-console.log(category);
+/**listener que corresponde al check de las categorias */
 for(element of category){
+    date=switchDate()
     element.addEventListener('click',(event)=>{
         categorySelected=event.currentTarget.name
-         loadInformation(jsonFilter(categorySelected,'category'))
-         if(event.currentTarget.checked==false) loadInformation(data)
+         loadInformation(jsonFilter(categorySelected,'category'),date)
+         if(event.currentTarget.checked==false) loadInformation(data,date)
         })
 }
 
